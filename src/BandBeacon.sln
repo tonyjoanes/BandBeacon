@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.Web", "BandBeacon.Web\BandBeacon.Web.csproj", "{E7BEDBD1-7840-47BB-AA19-C7B1CB3C3C4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.BandProfiles", "BandBeacon.BandProfiles\BandBeacon.BandProfiles.csproj", "{82C78566-9B83-4A73-990D-5918F381B3F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B2B5B10C-6140-44B0-AE43-69BFF13C5AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.EventManagement", "BandBeacon.EventManagement\BandBeacon.EventManagement.csproj", "{71344081-7706-4F80-BF5D-A479DDDF9183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.BandReviews", "BandBeacon.BandReviews\BandBeacon.BandReviews.csproj", "{1E1739B9-0086-4C54-8BFD-89D06549EE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.Notifications", "BandBeacon.Notifications\BandBeacon.Notifications.csproj", "{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7BEDBD1-7840-47BB-AA19-C7B1CB3C3C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7BEDBD1-7840-47BB-AA19-C7B1CB3C3C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7BEDBD1-7840-47BB-AA19-C7B1CB3C3C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7BEDBD1-7840-47BB-AA19-C7B1CB3C3C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82C78566-9B83-4A73-990D-5918F381B3F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82C78566-9B83-4A73-990D-5918F381B3F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82C78566-9B83-4A73-990D-5918F381B3F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82C78566-9B83-4A73-990D-5918F381B3F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71344081-7706-4F80-BF5D-A479DDDF9183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71344081-7706-4F80-BF5D-A479DDDF9183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71344081-7706-4F80-BF5D-A479DDDF9183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71344081-7706-4F80-BF5D-A479DDDF9183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E1739B9-0086-4C54-8BFD-89D06549EE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E1739B9-0086-4C54-8BFD-89D06549EE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E1739B9-0086-4C54-8BFD-89D06549EE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E1739B9-0086-4C54-8BFD-89D06549EE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82C78566-9B83-4A73-990D-5918F381B3F7} = {B2B5B10C-6140-44B0-AE43-69BFF13C5AAA}
+		{71344081-7706-4F80-BF5D-A479DDDF9183} = {B2B5B10C-6140-44B0-AE43-69BFF13C5AAA}
+		{1E1739B9-0086-4C54-8BFD-89D06549EE93} = {B2B5B10C-6140-44B0-AE43-69BFF13C5AAA}
+		{8DBD40CE-6A76-4A06-BF83-F47AF2B906D3} = {B2B5B10C-6140-44B0-AE43-69BFF13C5AAA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CD3AAC0-1D07-4903-BFF9-5F47A53AEF9B}
+	EndGlobalSection
+EndGlobal
