@@ -1,4 +1,7 @@
 using BandBeacon.BandProfiles;
+using BandBeacon.Notifications;
+using MediatR;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(BandProfileController).Assembly);
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(NotifyUsersOfBandUpdateHandler).Assembly));
 
 var app = builder.Build();
 

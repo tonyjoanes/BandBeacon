@@ -1,4 +1,4 @@
-﻿namespace BandBeacon.Notifications
+﻿namespace BandBeacon.UserManager
 {
     public class Class1
     {

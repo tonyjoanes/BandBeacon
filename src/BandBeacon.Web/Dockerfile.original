@@ -10,9 +10,6 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["BandBeacon.Web/BandBeacon.Web.csproj", "BandBeacon.Web/"]
-COPY ["BandBeacon.BandProfiles/BandBeacon.BandProfiles.csproj", "BandBeacon.BandProfiles/"]
-COPY ["BandBeacon.BandReviews/BandBeacon.BandReviews.csproj", "BandBeacon.BandReviews/"]
-COPY ["BandBeacon.EventManagement/BandBeacon.EventManagement.csproj", "BandBeacon.EventManagement/"]
 RUN dotnet restore "./BandBeacon.Web/./BandBeacon.Web.csproj"
 COPY . .
 WORKDIR "/src/BandBeacon.Web"

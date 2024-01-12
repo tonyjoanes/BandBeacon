@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BandBeacon.Domain.Notifications;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BandBeacon.BandProfiles
 {
@@ -6,9 +8,22 @@ namespace BandBeacon.BandProfiles
     [Route("api/bandprofiles")]
     public class BandProfileController : ControllerBase
     {
+        private readonly IMediator mediator;
+
+        public BandProfileController(IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
         [HttpGet("health")]
         public ActionResult<string> Health()
         {
+            mediator.Publish(new BandProfileUpdated
+            {
+                BandId = 123,
+                BandName = "Guns & Roses",
+                BandDescription = "Rock and roll"
+            });
             return "BandProfile API is up and running!";
         }
     }

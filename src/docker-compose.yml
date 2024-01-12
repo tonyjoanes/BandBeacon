@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  api:
+    image: bandbeaconimage
+    build:
+      context: .
+      dockerfile: BandBeacon.Web/Dockerfile
+    ports:
+      - "8000:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=bandbeacondb;User=sa;Password=Your_password123;
+
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      SA_PASSWORD: "Your_password123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
