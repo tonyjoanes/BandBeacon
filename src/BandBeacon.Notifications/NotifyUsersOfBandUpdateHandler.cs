@@ -1,4 +1,4 @@
-﻿using BandBeacon.Domain.Notifications;
+﻿using BandBeacon.Core.Notifications;
 using MediatR;
 
 namespace BandBeacon.Notifications

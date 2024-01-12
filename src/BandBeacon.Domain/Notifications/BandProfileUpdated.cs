@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace BandBeacon.Domain.Notifications
+namespace BandBeacon.Core.Notifications
 {
     public class BandProfileUpdated : INotification
     {

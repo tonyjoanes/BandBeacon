@@ -12,11 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Handlers\" />
+    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using BandBeacon.Domain.Notifications;
+﻿using BandBeacon.BandProfiles.Queries;
+using BandBeacon.Core.Notifications;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,13 @@ namespace BandBeacon.BandProfiles
                 BandDescription = "Rock and roll"
             });
             return "BandProfile API is up and running!";
+        }
+
+
+        [HttpGet("{id}")] 
+        public async Task<string> GetById(int id)
+        {
+            return await mediator.Send(new GetBandByIdQuery { Id = id });
         }
     }
 }

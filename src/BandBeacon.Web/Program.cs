@@ -1,16 +1,20 @@
 using BandBeacon.BandProfiles;
+using BandBeacon.BandProfiles.Handlers;
+using BandBeacon.Core.ApiSupport;
 using BandBeacon.Notifications;
-using MediatR;
-using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddControllers()
+builder.Services.AddControllers(o => o.Filters.Add(new ApiResponseFilter()))
     .AddApplicationPart(typeof(BandProfileController).Assembly);
 
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(NotifyUsersOfBandUpdateHandler).Assembly));
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(NotifyUsersOfBandUpdateHandler).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(GetBandByIdHandler).Assembly);
+});
 
 var app = builder.Build();
 
@@ -22,6 +26,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

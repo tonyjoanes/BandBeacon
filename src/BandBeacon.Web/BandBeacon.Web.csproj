@@ -16,7 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BandBeacon.BandProfiles\BandBeacon.BandProfiles.csproj" />
     <ProjectReference Include="..\BandBeacon.BandReviews\BandBeacon.BandReviews.csproj" />
-    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Domain.csproj" />
+    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Core.csproj" />
     <ProjectReference Include="..\BandBeacon.EventManagement\BandBeacon.EventManagement.csproj" />
     <ProjectReference Include="..\BandBeacon.Notifications\BandBeacon.Notifications.csproj" />
     <ProjectReference Include="..\BandBeacon.UserManager\BandBeacon.UserManager.csproj" />

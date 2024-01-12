@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Domain.csproj" />
+    <ProjectReference Include="..\BandBeacon.Domain\BandBeacon.Core.csproj" />
   </ItemGroup>
 
 </Project>

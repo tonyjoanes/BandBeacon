@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BandBeacon.UserManager", "B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FF0C91B7-020A-44DD-B375-95130D25C83E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.Domain", "BandBeacon.Domain\BandBeacon.Domain.csproj", "{8AA86B7D-56E1-4E30-8E79-330A954560E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandBeacon.Core", "BandBeacon.Domain\BandBeacon.Core.csproj", "{8AA86B7D-56E1-4E30-8E79-330A954560E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
