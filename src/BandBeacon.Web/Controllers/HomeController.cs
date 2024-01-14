@@ -6,15 +6,23 @@ namespace BandBeacon.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IHttpClientFactory httpClientFactory;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IHttpClientFactory httpClientFactory, ILogger<HomeController> logger)
         {
+            this.httpClientFactory = httpClientFactory;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            var client = httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:44301/api/bandprofiles/1");
+            response.EnsureSuccessStatusCode();
+
+            var content = await response.Content.ReadAsStringAsync();
+
             return View();
         }
 

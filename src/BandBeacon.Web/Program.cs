@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers(o => o.Filters.Add(new ApiResponseFilter()))
     .AddApplicationPart(typeof(BandProfileController).Assembly);
+builder.Services.AddHttpClient();
 
 builder.Services.AddMediatR(cfg =>
 {
@@ -35,6 +36,9 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
