@@ -13,6 +13,7 @@ builder.Services.AddHttpClient();
 
 builder.Services.AddMediatR(cfg =>
 {
+    cfg.RegisterServicesFromAssemblyContaining<Program>();
     cfg.RegisterServicesFromAssembly(typeof(NotifyUsersOfBandUpdateHandler).Assembly);
     cfg.RegisterServicesFromAssembly(typeof(GetBandByIdHandler).Assembly);
 });
