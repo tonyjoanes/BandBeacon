@@ -2,6 +2,10 @@ using BandBeacon.BandProfiles;
 using BandBeacon.BandProfiles.Handlers;
 using BandBeacon.Core.ApiSupport;
 using BandBeacon.Notifications;
+using BandBeacon.UserManager;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +22,17 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(GetBandByIdHandler).Assembly);
 });
 
+builder.Services.AddAuthentication().AddBearerToken(IdentityConstants.BearerScheme);
+builder.Services.AddAuthorizationBuilder();
+builder.Services.AddDbContext<AppDbContext>(
+    options => options.UseInMemoryDatabase("BandBeaonDb"));
+builder.Services.AddIdentityCore<BandBeaconUser>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddApiEndpoints();
+
 var app = builder.Build();
+
+app.MapIdentityApi<BandBeaconUser>();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -28,7 +42,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseMiddleware<ExceptionHandlingMiddleware>();
+//app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

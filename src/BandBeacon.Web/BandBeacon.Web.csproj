@@ -11,6 +11,8 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
   </ItemGroup>
@@ -27,6 +29,14 @@
   <ItemGroup>
     <Folder Include="Areas\Band\Data\" />
     <Folder Include="Areas\Band\Models\" />
+    <Folder Include="Areas\Events\Controllers\" />
+    <Folder Include="Areas\Events\Data\" />
+    <Folder Include="Areas\Events\Models\" />
+    <Folder Include="Areas\Events\Views\" />
+    <Folder Include="Areas\Reviews\Controllers\" />
+    <Folder Include="Areas\Reviews\Data\" />
+    <Folder Include="Areas\Reviews\Models\" />
+    <Folder Include="Areas\Reviews\Views\" />
   </ItemGroup>
 
 </Project>
